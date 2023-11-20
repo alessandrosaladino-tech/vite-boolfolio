@@ -20,7 +20,7 @@ export default {
                             <a class="nav-link active" href="/" aria-current="page">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About me</a>
+                            <router-link class="nav-link" to="/AppAbout">About Me</router-link>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contacts</a>

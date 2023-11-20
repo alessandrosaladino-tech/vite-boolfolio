@@ -71,6 +71,8 @@ export default {
       </div>
     </div>
   </main>
+
+  <router-view></router-view>
   <!-- /#app_main -->
   <AppFooter />
 </template>
