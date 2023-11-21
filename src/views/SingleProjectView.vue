@@ -61,7 +61,7 @@ export default {
 
                         <div class="row">
                             <div class="col">
-                                <a :href="this.project.website_link"
+                                <a :href="this.project.public_link"
                                     class="btn btn-lg btn-warning text-decoration-none text-dark fs-6 d-block">
                                     Website Link
                                 </a>
