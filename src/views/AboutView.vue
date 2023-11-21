@@ -1,7 +1,7 @@
 <script >
 
 export default {
-    name: 'AppAbout',
+    name: 'AboutView',
 
     props: {
 
@@ -18,11 +18,11 @@ export default {
 <template>
     <div class="container h-100">
 
-        <div class="row h-50 align-items-center grow-left">
+        <div class="row h-50 align-items-center ">
 
             <div class="col">
-                <h1 class="text-light text-center">Hi there 👋</h1>
-                <h2 class="text-light text-center">My name is Alessandro Saladino and i am a Full Stack Web Developer!
+                <h1 class="text-center">Hi there 👋</h1>
+                <h2 class=" text-center">My name is Alessandro Saladino and i am a Full Stack Web Developer!
                 </h2>
             </div>
 
@@ -30,9 +30,9 @@ export default {
 
         </div>
 
-        <div class="row justify-content-end h-50 align-items-center grow-right">
+        <div class="row  justify-content-center align-items-center ">
 
-            <div class="col col-md-6 text-light ">
+            <div class="col col-md-6 text-center">
 
                 <h3>Skills:</h3>
                 <ul class="list-unstyled">
