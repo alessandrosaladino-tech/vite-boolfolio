@@ -41,12 +41,12 @@ export default {
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 fs-6">
                 <div class="col py-5">
-                    <img :src="this.baseUrl + '/storage/' + this.project.cover_image" alt="">
+                    <img :src=" this.project.thumb" alt=""> <!--this.baseUrl + '/storage/' +  (for add storage img)-->
                 </div>
                 <div class="col">
                     <div class="container py-5">
                         <div class="my-1">
-                            <span class="badge rounded-pill text-bg-warning text-center w-100">
+                            <span class="badge rounded-pill text-bg-warning text-center w-100">  <!--Se il progetto non ha il type non stampa nulla errore-->
                                 {{ this.project.type.name }}
                             </span>
                         </div>

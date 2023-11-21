@@ -23,6 +23,17 @@ export default {
                 <small class="badge rounded-pill text-bg-primary m-1" v-for="technology in project.technologies">{{
                     technology.name }}</small>
             </div>
+            <p class="card-text placeholder-glow">
+                {{ project.description }}
+            </p>
+            <div class="col">
+                    <router-link class="my-1 btn btn-dark text-white w-100" :to="{
+                        name: 'project',
+                        params: { slug: project.slug }
+                    }">
+                        View Project
+                    </router-link>
+                </div>
             <div class="d-flex justify-content-around py-1">
                 <a :href="project.website_link" class="btn btn-primary">
                     Website link
