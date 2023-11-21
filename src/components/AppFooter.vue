@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <footer id="app_footer" class="bg-dark text-light py-3">
+    <footer id="app_footer" class="bg-transparent text-light py-3">
 
         <div class="container ">
             <div class="row justify-content-between text-center">
@@ -42,4 +42,10 @@ export default {
     <!-- /#app_footer -->
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+#app_footer {
+    height: 20%;
+}
+
+</style>

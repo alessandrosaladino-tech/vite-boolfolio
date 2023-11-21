@@ -46,7 +46,7 @@ export default {
                 <div class="col">
                     <div class="container py-5">
                         <div class="my-1">
-                            <span class="badge rounded-pill text-bg-warning text-center w-100">  <!--Se il progetto non ha il type non stampa nulla errore-->
+                            <span class="badge rounded-pill text-bg-success text-center w-100">  <!--Se il progetto non ha il type non stampa nulla errore-->
                                 {{ this.project.type.name }}
                             </span>
                         </div>
@@ -62,7 +62,7 @@ export default {
                         <div class="row">
                             <div class="col">
                                 <a :href="this.project.public_link"
-                                    class="btn btn-lg btn-warning text-decoration-none text-dark fs-6 d-block">
+                                    class="btn btn-lg btn-danger text-decoration-none text-dark fs-6 d-block">
                                     Website Link
                                 </a>
                             </div>

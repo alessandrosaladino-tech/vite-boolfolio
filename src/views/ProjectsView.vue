@@ -40,16 +40,16 @@ export default {
 </script>
 
 <template>
-    <div id="jumbotron" class="p-5 bg-secondary-subtle">
+    <div id="jumbotron" class="p-5 bg-transparent">
         <div class="container py-5 text-center text-lg-start">
-            <h1 class="display-5 fw-bold text-center">Hi There!</h1>
-            <p class="fs-4 text-center">All my Projects!</p>
+            <h1 class="display-5 fw-bold text-center text-danger">Hi There!</h1>
+            <p class="fs-4 text-center text-white">All my Projects!</p>
         </div>
     </div>
     <div id="project_list" class="py-3">
         <div class="container">
 
-            <div class="row row-cols-1 row-cols-lg-3 g-3 justify-content-center">
+            <div class="row row-cols-1 row-cols-lg-3 g-4 justify-content-center">
                 <div v-if="this.projects.length > 0" class="col" v-for="project in  this.projects ">
                     <AppCard :project="project" />
                 </div>
@@ -57,10 +57,10 @@ export default {
             </div>
 
             <nav aria-label="Page navigation" class="d-flex justify-content-center my-3">
-                <ul class="pagination">
-                    <li class="page-item" :class="link.active ? 'active' : ''" aria-current="page"
+                <ul class="pagination border border-dark">
+                    <li class="page-item border border-dark" :class="link.active ? 'active' : ''" aria-current="page"
                         v-for="link in this.links">
-                        <a class="page-link" role="button" @click="fetchData(link.url)" v-html="link.label"></a>
+                        <a class="page-link bg-danger text-dark" role="button" @click="fetchData(link.url)" v-html="link.label"></a>
                     </li>
                 </ul>
             </nav>

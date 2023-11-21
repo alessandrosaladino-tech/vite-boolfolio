@@ -12,14 +12,28 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <div id="background">
+    <AppHeader />
 
-  <main id="app_main">
-    <router-view></router-view>
-  </main>
-  <!-- /#app_main -->
+    <main id="app_main">
+      <router-view></router-view>
+    </main>
+    <!-- /#app_main -->
 
-  <AppFooter />
+    <AppFooter />
+  </div>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+#background {
+  background-image: url(./assets/img/pexels-felix-mittermeier-956999.jpg);
+  height: 100%;
+  background-size: cover;
+
+}
+
+#app_main {
+   height: 60%;
+}
+
+</style>
