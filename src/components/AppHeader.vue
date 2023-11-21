@@ -7,8 +7,8 @@ export default {
 <template>
     <header id="app_header">
         <nav class="navbar navbar-expand-sm  bg-transparent  border-header">
-            <div class="container ">
 
+            <div class="container">
                 <RouterLink class="navbar-brand py-3 text-danger " active-class="active " to="/home">
                     <img class="avatar avatar_img" src="../assets/img/volpe.png" alt="">
                 </RouterLink>
@@ -18,7 +18,7 @@ export default {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav m-auto mt-2 mt-lg-0">
+                    <ul class="navbar-nav m-auto mt-2 mt-lg-0 fs-3  gap-5">
                         <li class="nav-item">
                             <RouterLink class="nav-link py-3 text-danger" active-class="active " to="/home">Home
                             </RouterLink>
@@ -72,12 +72,12 @@ export default {
 .border-header {
     border-bottom: 2px solid black;
     border-radius: 12px / 10px;
-    box-shadow: 10px 10px 10px rgba(0,0,0,.6);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .6);
 }
 
 .nav-link:hover {
-    border-bottom:1px solid rgba(255, 0, 0, 0.671);
-    box-shadow: 10px 10px  500px #d90404;
-    
+    border-bottom: 1px solid rgba(255, 0, 0, 0.671);
+    box-shadow: 10px 10px 500px #d90404;
+
 }
 </style>
