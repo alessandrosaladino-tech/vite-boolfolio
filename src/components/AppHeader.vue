@@ -71,8 +71,7 @@ export default {
 
 .border-header {
     border-bottom: 2px solid black;
-    border-radius: 12px / 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, .6);
+    box-shadow: 0px 10px 10px  rgba(0, 0, 0, .6);
 }
 
 .nav-link:hover {
