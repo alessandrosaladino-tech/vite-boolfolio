@@ -32,6 +32,8 @@ export default {
 
 }
 
-
+#app_main {
+  height: 100%;
+}
 
 </style>
