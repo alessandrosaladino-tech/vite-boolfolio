@@ -9,7 +9,7 @@ export default {
         <nav class="navbar navbar-expand-sm  bg-transparent  border-header">
 
             <div class="container">
-                <RouterLink class="navbar-brand py-3 text-danger " active-class="active " to="/home">
+                <RouterLink class="navbar-brand py-3 text-danger " active-class="active " to="/">
                     <img class="avatar avatar_img" src="../assets/img/volpe.png" alt="">
                 </RouterLink>
                 <button class="navbar-toggler d-lg-none " type="button" data-bs-toggle="collapse"
@@ -20,7 +20,7 @@ export default {
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav m-auto mt-2 mt-lg-0 fs-3  gap-5">
                         <li class="nav-item">
-                            <RouterLink class="nav-link py-3 text-danger" active-class="active " to="/home">Home
+                            <RouterLink class="nav-link py-3 text-danger" active-class="active " to="/">Home
                             </RouterLink>
                         </li>
                         <li class="nav-item">
@@ -44,9 +44,7 @@ export default {
 
 
 <style lang="scss" scoped>
-#app_header {
-    height: 20%;
-}
+
 
 .avatar {
     width: 100px;

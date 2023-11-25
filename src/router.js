@@ -8,7 +8,10 @@ import SingleProjectView from './views/SingleProjectView.vue';
 import NotFoundView from './views/NotFoundView.vue';
 
 
+
 const routes = [
+
+   
 
     {
         path: '/about',
@@ -16,7 +19,7 @@ const routes = [
         component: AboutView
     },
     {
-        path: '/home',
+        path: '/',
         name: 'home',
         component: HomeView,
     },
