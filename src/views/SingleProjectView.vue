@@ -41,22 +41,36 @@ export default {
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 fs-6">
                 <div class="col py-5">
-                    <img :src=" this.project.thumb" alt=""> <!--this.baseUrl + '/storage/' +  (for add storage img)-->
+                    <img :src="this.project.thumb" alt=""> <!--this.baseUrl + '/storage/' +  (for add storage img)-->
                 </div>
                 <div class="col">
                     <div class="container py-5">
                         <div class="my-1">
-                            <span class="badge rounded-pill text-bg-success text-center w-100">  <!--Se il progetto non ha il type non stampa nulla errore-->
-                                {{ this.project.type.name }}
-                            </span>
+
                         </div>
                         <h1 class="display-5 fw-bold">#{{ this.project.id }} - {{ this.project.title }}</h1>
-                        <div class="my-1 d-flex justify-content-center flex-wrap">
-                            <span class="badge rounded-pill text-bg-primary m-1"
-                                v-for="technology in this.project.technologies">
-                                {{ technology.name }}
-                            </span>
+                        
+                        <div class="d-flex" v-if="project.technologies.length > 0">
+                            <ul class="d-flex g-2 list-unstyled" v-for="technology in project.technologies">
+                                <li class="badge bg-success me-1">
+                                    <i class="fa-solid fa-code"></i> {{ technology.name }}
+                                </li>
+                            </ul>
                         </div>
+
+                        <div class="d-flex" v-else>
+                            <ul class="d-flex gap-2 list-unstyled">
+                                <li class="badge bg-secondary">
+                                    <i class="fa-regular fa-file"></i> No Type
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p><strong>Type: </strong>
+                            <span v-if="project.type"> {{ project.type.name }} </span>
+                            <span v-else>Uncategorized</span>
+                        </p>
+
                         <p class="col-md-8 text-center w-100">{{ this.project.description }}</p>
 
                         <div class="row">
