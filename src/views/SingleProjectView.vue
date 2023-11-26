@@ -37,41 +37,47 @@ export default {
 </script>
 
 <template>
-    <div class="p-5 bg-light" v-if="this.querySuccessed">
+    <div class="p-5 bg_single" v-if="this.querySuccessed">
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 fs-6">
-                <div class="col py-5">
-                    <img :src="this.project.thumb" alt=""> <!--this.baseUrl + '/storage/' +  (for add storage img)-->
-                </div>
-                <div class="col">
-                    <div class="container py-5">
-                        <div class="my-1">
+            <div class="row">
+                <div class="card card_bg">
+                    <div class="d-flex justify-content-center align-items-center pt-3">
+                        <img class="card-img-top img_single" v-if="this.project.thumb" :src="this.project.thumb" alt="">
+                        <img v-else class="card-img-top img_single" src="../assets/img/volpe.png" alt="">
+                        <!--this.baseUrl + '/storage/' +  (for add storage img)-->
+                    </div>
+                    <div class="card-body text-center">
+                        <h1 class="display-5 fw-bold card-title text-danger pb-5">#{{ this.project.id }} - {{
+                            this.project.title }}</h1>
 
-                        </div>
-                        <h1 class="display-5 fw-bold">#{{ this.project.id }} - {{ this.project.title }}</h1>
-                        
                         <div class="d-flex" v-if="project.technologies.length > 0">
-                            <ul class="d-flex g-2 list-unstyled" v-for="technology in project.technologies">
-                                <li class="badge bg-success me-1">
-                                    <i class="fa-solid fa-code"></i> {{ technology.name }}
+                            <ul class="d-flex g-2 list-unstyled pb-4 " v-for="technology in project.technologies">
+                                <li class="badge bg-danger me-1">
+                                    <i class="bi bi-code"></i> {{ technology.name }}
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="d-flex" v-else>
+                        <div class="d-flex pb-4" v-else>
                             <ul class="d-flex gap-2 list-unstyled">
                                 <li class="badge bg-secondary">
-                                    <i class="fa-regular fa-file"></i> No Type
+                                    <i class="bi bi-code"></i> No Technology
                                 </li>
                             </ul>
                         </div>
 
-                        <p><strong>Type: </strong>
-                            <span v-if="project.type"> {{ project.type.name }} </span>
-                            <span v-else>Uncategorized</span>
-                        </p>
+                        <div class="pb-4 ">
+                            <p><strong class="text-danger">Type: </strong>
+                                <span class="text-white" v-if="project.type"> {{ project.type.name }} </span>
+                                <span class="text-white" v-else>Uncategorized</span>
+                            </p>
+                        </div>
 
-                        <p class="col-md-8 text-center w-100">{{ this.project.description }}</p>
+                        <div class="pb-5  d-flex justify-content-center align-items-center">
+                            <p v-if="this.project.description" class="col-md-8 w-100 text-white">{{
+                                this.project.description }}</p>
+                            <p v-else class="col-md-8 text-center w-100 text-white">No Description</p>
+                        </div>
 
                         <div class="row">
                             <div class="col">
@@ -101,6 +107,7 @@ export default {
 
 
                     </div>
+
                 </div>
             </div>
         </div>
@@ -109,4 +116,11 @@ export default {
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card_bg {
+    background-color: rgba(0, 0, 0, 0.785);
+    box-shadow: 0px 0px  15px #d90404;
+}
+
+
+</style>
